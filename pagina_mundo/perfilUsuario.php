@@ -1,5 +1,5 @@
 <?php
-require_once("./conexion/connection.php");
+require_once("../conexion/connection.php");
 session_start();
 $con = connection();
 $username= $_GET["username"];

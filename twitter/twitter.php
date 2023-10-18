@@ -1,9 +1,10 @@
 <?php
-require_once("./conexion/connection.php");
+require_once("../conexion/connection.php");
 session_start();
 $con = connection();
 $idUsuario = ($_SESSION['usuario']['id']);
-$sql ="SELECT * FROM publications where userId = $idUsuario";
+
+$sql ="SELECT * FROM publications where userId = $idUsuario order by id desc";
 $query = mysqli_query($con, $sql);
 ?>
 
@@ -30,6 +31,7 @@ $query = mysqli_query($con, $sql);
       <h3><?=($_SESSION['usuario']['createDate']);?></h3>
     </div>
   </div>
+  <a href="../cerreSesion/cierreSesion.php"><button>CERRAR SESION</button></a>
   <h1>Tweets</h1>
   <div id="contenido">
     <?php while ($row = mysqli_fetch_array($query)): ?>
