@@ -23,6 +23,6 @@ $con = connection();
 
       <input type="submit" value="Send" name="submit"/>
     </form>
-    <a href="\registro\paginaRegistro.php">¿No estas registrado?, iniar registro</a>
+    <a href="\registro\paginaRegistro.php">¿No estas registrado? iniciar registro</a>
 </body>
 </html>
